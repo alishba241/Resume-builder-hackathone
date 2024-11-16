@@ -1,0 +1,572 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, black, rgb(255, 0, 191), black);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+}
+
+.resume-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    width: 28%;
+    padding: 20px;
+    height: auto;
+    background-color: rgb(187, 2, 141);
+    border-right: 1px solid #ccc;
+    color: white;
+}
+
+.right-column {
+    width: 60%;
+    padding: 20px;
+    height: auto;
+}
+
+#resume-display {
+    position: relative;
+    height: auto;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+#skillList {
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#skillul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.li {
+    padding: 8px 12px;
+    background: white;
+    border-radius: 8px;
+    color: black;
+    margin: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+#projects {
+    padding: 0px 20px;
+    margin-top: 0px;
+}
+
+#projects h3 {
+    font-size: 24px;
+    color: rgb(156, 5, 118);
+    border-bottom: 2px solid rgb(156, 5, 118);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.project-item {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid rgb(156, 5, 118);
+}
+
+.project-item h4 {
+    font-size: 18px;
+    color: rgb(63, 12, 50);
+    margin: 0;
+    font-weight: bold;
+}
+
+.project-date {
+    font-size: 14px;
+    color: gray;
+    margin-top: 2px;
+    display: block;
+}
+
+.project-item p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+#work-experience {
+    padding: 0 20px;
+    margin-top: 0px;
+}
+
+#work-experience h3 {
+    font-size: 24px;
+    color: rgb(156, 5, 118);
+    border-bottom: 2px solid rgb(156, 5, 118);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.experience-item {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid rgb(156, 5, 118);
+}
+
+.experience-item h4 {
+    font-size: 18px;
+    color: rgb(63, 12, 50);
+    margin: 0;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 15px;
+    font-style: italic;
+    color: #555;
+    display: block;
+}
+
+.experience-date {
+    font-size: 14px;
+    color: gray;
+    display: block;
+    margin-top: 2px;
+}
+
+.experience-item p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.profile-photo img {
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 4px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo {
+    margin-top: 40px;
+}
+
+.contact h3,
+.education h3,
+.section h3 {
+    font-size: 24px;
+    border-bottom: 1px solid #f5ebeb;
+    margin-top: 50px;
+    padding-bottom: 5px;
+}
+
+#name {
+    color: rgb(187, 2, 141);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 8px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#jobRole {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+}
+
+#company {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: -7px;
+    padding-top: 20px;
+}
+
+#year {
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+}
+
+#syear,
+#eyear {
+    display: inline-flex;
+    margin-top: 0;
+}
+
+#degrees {
+    margin-top: 0;
+}
+
+.section h4 {
+    font-weight: 600;
+    color: black;
+    margin-top: 30px;
+}
+
+#workExp {
+    margin-top: -9px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact p,
+.education p {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/* ! toggle skills functionality */
+
+.togle-btn {
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: black;
+    outline: none;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.togle-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.selected-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+
+/* ! for mobile responsivness  */
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 80%;
+        border-radius: 5px;
+        padding: 0;
+    }
+
+    .left-column {
+        width: 30%;
+        padding: 10px;
+    }
+
+    .right-column {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #resume-display {
+        padding: 12px;
+    }
+
+    .profile-photo img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contact h3,
+    .education h3,
+    .section h3 {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    .contact p,
+    .education p {
+        font-size: 11px;
+        white-space: wrap;
+        word-wrap: break-word;
+
+    }
+
+    .li {
+        padding: 7px 10px;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .togle-btn {
+        width: 90%;
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+
+    #name {
+        font-size: 20px;
+        margin-top: 50px;
+        padding-bottom: 6px;
+        letter-spacing: 2px;
+    }
+
+    #jobRole {
+        font-size: 15px;
+        /* padding: 0;
+     margin: 0; */
+    }
+
+    #work-experience {
+        padding: 0 0px;
+        margin: 0;
+    }
+
+    #work-experience h3 {
+        font-size: 18px;
+        padding-bottom: 4px;
+        margin-bottom: 0px;
+        border-width: 1px;
+        font-weight: 500;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+
+
+    .section h4 {
+        margin-top: 30px;
+    }
+
+    .experience-item h4 {
+        font-size: 14px;
+    }
+
+    .company {
+        font-size: 12px;
+    }
+
+    .experience-date {
+        font-size: 12px;
+    }
+
+    .experience-item p {
+        font-size: 11px;
+    }
+
+    #projects {
+        padding: 0 0px;
+    }
+
+    #projects h3 {
+        font-size: 18px;
+        padding-bottom: 3px;
+        margin-bottom: 0px;
+        border-width: 1px;
+        font-weight: 500;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .project-item h4 {
+        font-size: 14px;
+    }
+
+    .project-item p {
+        font-size: 11px;
+    }
+
+    .project-item {
+        border-left-width: 2px;
+    }
+
+    .experience-item {
+        border-left-width: 2px;
+    }
+}
+
+/* ! for extra small screens */
+@media (max-width: 480px) {
+    .left-column {
+        width: 31%;
+    }
+
+    .right-column {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    #resume-display {
+        padding: 5px;
+    }
+
+    .profile-photo img {
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+        border-width: 3px;
+    }
+
+    .contact h3,
+    .education h3,
+    .section h3 {
+        font-size: 12px;
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    .contact p,
+    .education p {
+        font-size: 8px;
+        white-space: wrap;
+        word-wrap: break-word;
+
+    }
+
+    .li {
+        padding: 4px 4px;
+        white-space: nowrap;
+        font-size: 8px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .togle-btn {
+        /* width: 90px; */
+        padding: 8px 7px;
+        font-size: 8px;
+    }
+
+    #name {
+        font-size: 14px;
+        margin-top: 40px;
+        padding-bottom: 6px;
+        letter-spacing: 1.5px;
+    }
+
+    #jobRole {
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #work-experience {
+        padding: 0 7px;
+        margin: 0;
+    }
+
+    #work-experience h3 {
+        font-size: 13px;
+        padding-bottom: 3px;
+        margin-bottom: 0px;
+        border-width: 1px;
+        font-weight: 500;
+        margin-top: 27px;
+        padding: 0;
+    }
+
+
+
+    .section h4 {
+        margin-top: 20px;
+    }
+
+    .experience-item h4 {
+        font-size: 11px;
+    }
+
+    .company {
+        font-size: 10px;
+    }
+
+    .experience-date {
+        font-size: 10px;
+    }
+
+    .experience-item p {
+        font-size: 9px;
+    }
+
+    #projects {
+        padding: 0 7px;
+    }
+
+    #projects h3 {
+        font-size: 13px;
+        padding-bottom: 3px;
+        margin-bottom: 0px;
+        border-width: 1px;
+        font-weight: 500;
+        margin-top: 27px;
+        padding: 0;
+    }
+
+    .project-item h4 {
+        font-size: 11px;
+    }
+
+    .project-item p {
+        font-size: 9px;
+    }
+
+    .project-item {
+        border-left-width: 2px;
+    }
+
+    .experience-item {
+        border-left-width: 2px;
+    }
+}

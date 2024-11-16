@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <div id="resume-display" class="resume" >
+        <div class="resume-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="profile-photo">
+                    <img src="profile.jpg" alt="Profile Photo" id="profile-image">
+                </div>
+                <div class="contact">
+                    <h3>CONTACT</h3>
+                    <p id="address">Karachi, Sindh</p>
+                    <p id="phone">03305498438</p>
+                    <p id="email">alishbasheikh723@gmail.com</p>
+                </div>
+                <div class="education">
+                    <h3>EDUCATION</h3>
+                    <p id="school">Sir Syed Govt College</p>
+                    <p id="syear">Sep 2024</p> - <p id="eyear">Present</p>
+                    <p id="degrees">FSC Pre-Medical Part - I</p>
+    
+                </div>
+                <div class="section" id="skillsec">
+                    <h3>SKILLS</h3>
+                    <div id="skillList">
+                        
+                        <div class="skills-container" id="selectedSkillsContainer">
+                            <ul id="skillul">
+                                <li class="li">Time Management</li>
+                                <li class="li">Problem Solving</li>
+                                <li class="li">Debugging</li>
+                                <li class="li">Programming</li>
+                                <li class="li">Graphic Design</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- ! skill toggle button -->
+                        
+                        <button class="togle-btn" id="toggle-skills-btn"  onclick="toggleSkills()">
+                            Hide Skills
+                        </button>
+                
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- Right Column -->
+            <div class="right-column">
+                <h1 id="name">Alishba Naveed</h1>
+                <h2 id="jobRole">Frontend Developer
+                </h2>
+    
+                <div class="section" id="work-experience">
+                    <h3>WORK EXPERIENCE</h3>
+                
+                    <div class="experience-item">
+                        <h4>Frontend Developer</h4>
+                        <span class="company">Tech Solutions Inc.</span>
+                        <span class="experience-date">Jan 2022 - Dec 2023</span>
+                        <p>Developed responsive and user-friendly websites using HTML, CSS, and JavaScript. Collaborated with design and
+                            backend teams to ensure seamless user experience and optimized performance.</p>
+                    </div>
+                
+                
+                </div>
+                
+                <div class="section" id="projects">
+                    <h3>PROJECTS</h3>
+                    <div class="project-item">
+                        <h4>Portfolio Website</h4>
+                        <p>Developed a responsive portfolio website using HTML, CSS, and JavaScript. The project includes multiple
+                            sections like About, Skills, and Contact, and is fully responsive on all devices.</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>E-commerce Platform</h4>
+                        <p>Built an e-commerce platform with Next.js and integrated payment methods like Easypaisa and JazzCash. It
+                            supports product listings, a shopping cart, and user authentication.</p>
+                    </div>
+                    <div class="project-item">
+                        <h4>Blog Website</h4>
+                        <p>Created a blog website using React and Next.js with features like dynamic routing, a search bar, and blog
+                            categories for better user experience and navigation.</p>
+                    </div>
+                </div>
+
+
+        </div>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
